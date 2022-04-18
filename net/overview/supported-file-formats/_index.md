@@ -49,13 +49,13 @@ Extension             | Details
 **.PDF**              | Portable Document Format (_see the note below_).
 **.JPG**              | JPEG, the most popular format for smartphone photos.
 **.PNG**              | Portable Network Graphics.
-**.TIFF** or **.TIF** | Tag Image File Format, commonly used for high quality scanning. _See the note below_.
+**.TIFF** or **.TIF** | Tag Image File Format, commonly used for high quality scanning (_see the note below_).
 **.GIF**              | Graphics Interchange Format. Limited to 256 colors.
 **.BMP**              | Bitmap image file.
 
 {{% alert color="primary" %}} 
 
-Multi-page PDF and TIFF files are not supported. Each page must be scanned as a separate file.
+Recognition of multi-page PDF and TIFF files is not supported. Each page must be scanned as a separate file.
 
 {{% /alert %}} 
 

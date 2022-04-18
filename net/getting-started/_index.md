@@ -25,5 +25,5 @@ Get started with Aspose.OMR for .NET in a few steps:
   Install Aspose.OMR for .NET NuGet package.
 - [Licensing](/omr/net/licensing/)  
   Learn how to obtain and apply the Aspose.OMR for .NET license.
-- [Hello, World!](/omr/net/how-to-run-the-examples/)  
+- [Hello, World!](/omr/net/hello-world/)  
   Develop a bare minimum application for rendering and recognizing OMR forms.

@@ -1,6 +1,6 @@
 ---
 weight: 1
-date: "2022-04-13"
+date: "2022-04-15"
 author: "Vladimir Lapin"
 type: docs
 url: /net/release-notes/latest/
@@ -23,7 +23,7 @@ This article contains a summary of recent changes, enhancements and bug fixes in
 
 Key | Summary | Category
 --- | ------- | --------
-OMRNET-445 | Added the ability to customize the right margin of print form pages by specifying the margin width (in pixels) for the `RightMargin` property in [`GlobalPageSettings`](https://apireference.aspose.com/omr/net/aspose.omr.generation/globalpagesettings). | New Feature
+OMRNET-445 | Added the ability to customize the right margin of print form pages by specifying the margin width (in pixels) for the `PageMarginRight` property in [`GlobalPageSettings`](https://apireference.aspose.com/omr/net/aspose.omr.generation/globalpagesettings). | New Feature
 OMRNET-445 | A barcode can be added to the page footer of the OMR form. | Enhancement
 OMRNET-445 | Added the ability to customize the top padding of the `VerticalChoiceBox` form element by specifying the padding height (in pixels) for the optional `top_padding` element's property. | New Feature
 OMRNET-449 | Added support for new [paper sizes](https://apireference.aspose.com/omr/net/aspose.omr.generation/papersize): **Tabloid (11 x 17 inches)**, non-standard long (**8.5 x 19 inches**) and non-standard extra long (**8.5 x 21 inches**). | Enhancement
@@ -56,14 +56,13 @@ This change will not affect existing code, print forms, or recognition results.
 
 {{% /alert %}} 
 
-Added a new public field `RightMargin` to `GlobalPageSettings` class:
+Added a new public field `PageMarginRight` to `GlobalPageSettings` class:
 
 - Type: **Int32**
-- Minimum value: `???`
-- Maximum value: `???`
-- Default value: `???`
+- Minimum value: `-20` (no margin from the right edge of the paper)
+- Maximum value: `{page width} - 20`
 
-This field specifies the width (in pixels) of the right margin of print form pages.
+This field specifies the width (in pixels) of the right margin of print form pages. If this field is omitted, the default right margin will be used (as in the previous version).
 
 ### Removed public APIs:
 
@@ -71,10 +70,19 @@ _No changes._
 
 ## Usage examples
 
-See the examples below to learn more about the template markup language changes introduced in this release:
+See the examples below to learn more about the changes introduced in this release:
 
 ### top_padding property of VerticalChoiceBox element
 
 ```
-Waiting, please load...
+?vertical_choicebox=Potassium
+	top_padding=160
+?answer=Potassium chloride
+?content=Potassium chloride
+	font_style=Regular
+	font_size=12
+&answer
+&vertical_choicebox
 ```
+
+![top_padding property of VerticalChoiceBox element](top_padding.png)

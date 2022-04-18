@@ -14,7 +14,7 @@ keywords:
 - template
 ---
 
-**Aspose.OMR for .NET** is a reliable and versatile programming API for creating custom on-premise or web-based OMR applications of any scale and complexity. It is extremely **easy to use** even for inexperienced developers. A simple application that can generate and recognize OMR forms can be written in **10** lines of code.
+**Aspose.OMR for .NET** is a reliable and versatile programming API for creating custom on-premise or web-based OMR applications of any scale and complexity. It is extremely **easy to use** even for inexperienced developers. A simple application that can generate and recognize OMR forms can be written [in **10** lines of code](/omr/net/hello-world/).
 
 ## Key benefits
 

@@ -41,7 +41,7 @@ Get familiar with Aspose.OMR for .NET library in a few simple steps.
 - [System requirements](/omr/net/system-requirements/)
 - [Installation](/omr/net/installation/)
 - [Licensing](/omr/net/licensing/)
-- [Hello, World!](/omr/net/how-to-run-the-examples/)
+- [Hello, World!](/omr/net/hello-world/)
 
 ## Developer reference
 
