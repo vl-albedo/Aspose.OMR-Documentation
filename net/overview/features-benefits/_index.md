@@ -40,4 +40,4 @@ Aspose.OMR for .NET offers a wide range of benefits for projects of any size.
 
 ## Limitations
 
-- Optical character recognition (OCR) in OMR forms is not supported at the moment.
+- Optical character recognition (OCR) in OMR forms is not supported at the moment. You can combine Aspose.OMR for .NET with [Aspose.OCR](https://products.aspose.app/ocr) to deal with such cases.

@@ -25,7 +25,7 @@ Format     | Details
 ---------- | -------
 **JSON**   | A popular [open standard](https://www.json.org/) file format for describing nested data structures.
 **TXT**    | Lightweight text markup specifically tailored for Aspose.OMR forms.
-**Object** | Describe the OMR form directly in you application code.
+**Object** | Describe the OMR form directly in the application code.
 
 ## Print forms
 

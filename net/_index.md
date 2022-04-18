@@ -20,11 +20,11 @@ keywords:
 
 ![Aspose.OMR for .NET](aspose-omr-net.png)
 
-**Aspose.OMR for .NET** is an easy-to-use, versatile, and cost-effective API for [designing](/omr/net/template-generation/), rendering and [recognizing](/omr/net/perform-omr-on-images/) hand-filled answer sheets, surveys, applications and similar forms. With it, you can quickly develop on-premise and web-based .NET software for [optical mark recognition (OMR)](/omr/net/omr-technology/) that work without dedicated scanners, transoptic paper or special ink. Respondents can fill out your forms with a pen or pencil and use any type of marks - artificial intelligence and advanced accuracy calibration ensure reliable results.
+**Aspose.OMR for .NET** is an easy-to-use, versatile, and cost-effective API for [designing](/omr/net/template-generation/), rendering and [recognizing](/omr/net/perform-omr-on-images/) hand-filled answer sheets, surveys, applications, and similar forms. With it, you can quickly develop on-premise and web-based .NET software for [optical mark recognition (OMR)](/omr/net/omr-technology/) that work without dedicated scanners, transoptic paper or special ink. Respondents can fill out your forms with a pen or pencil and use any type of marks - artificial intelligence and advanced accuracy calibration ensure reliable results.
 
 Aspose.OMR for .NET library can recognize scanned images or even smartphone photos in the most popular [formats](/omr/net/supported-file-formats/): JPG, PDF, TIFF, PNG, BMP or GIF. Results are returned as CSV, XML or JSON, which allows for importing them into the database, CRM or analysis system of your choice.
 
-In addition to form recognition, Aspose.OMR for .NET can generate professional print forms, from examination papers to customer satisfaction surveys and election ballots. A highly flexible [markup language](/omr/net/template-generation/) allows you to combine various elements that best suit your purpose and target audience. You can further personalize OMR forms by adding logos, barcodes, QR codes or images.
+In addition to form recognition, Aspose.OMR for .NET can generate professional print forms, from examination papers to customer satisfaction surveys and election ballots. A highly flexible [markup language](/omr/net/template-generation/) allows you to combine various elements that best suit your purpose and target audience. You can further personalize OMR forms by adding logos, barcodes, QR codes, or images.
 
 ## Product overview
 
