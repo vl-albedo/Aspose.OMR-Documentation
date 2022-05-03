@@ -4,6 +4,8 @@ date: "2022-04-12"
 author: "Vladimir Lapin"
 type: docs
 url: /net/features-benefits/
+aliases:
+- /net/features-list/
 title: Why Aspose.OMR?
 description: Discover features and benefits of Aspose.OMR for .NET.
 keywords:
