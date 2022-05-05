@@ -1,6 +1,6 @@
 ---
 weight: 100
-date: "2022-04-20"
+date: "2022-05-04"
 author: "Vladimir Lapin"
 type: docs
 url: /net/json-markup/examples/
@@ -16,5 +16,5 @@ keywords:
 - form
 - JSON
 - example
-- sample
+- code
 ---

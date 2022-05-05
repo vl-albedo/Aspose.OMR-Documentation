@@ -17,5 +17,5 @@ keywords:
 - text
 - txt
 - example
-- sample
+- code
 ---

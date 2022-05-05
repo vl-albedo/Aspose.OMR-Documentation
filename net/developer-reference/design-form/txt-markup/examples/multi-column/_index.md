@@ -1,239 +1,223 @@
 ---
-title: Multi-Column OMR Template example
-type: docs
 weight: 10
-url: /net/template-generation/txt/examples/multi-column
+date: "2022-05-04"
+author: "Vladimir Lapin"
+type: docs
+url: /net/txt-markup/examples/multi-column/
+aliases:
+- /net/template-generation/txt/examples/multi-column
+title: Multi-column questionnaire
+description: A compact questionnaire with multi-column layout and open-ended questions.
+keywords:
+- layout
+- markup
+- template
+- design
+- form
+- text
+- txt
+- column
+- questionnaire
+- compact
+- write-in
 ---
 
-## **Introduction**
-In this article, we provide example of creating a multi-column questionnaire.
+In this example, we will show the source code for a compact questionnaire with a multi-column layout, open-ended questions and a footer.
 
-{{% alert color="primary" %}} 
+## Used elements
 
-It is important to note that each attribute is parsed successfully only if it starts with a **tabulation** symbol, not just spaces. If you notice strange behavior or errors, the first thing to check will be that all additional attributes in markup start with **\t**.
+- [block](/omr/net/txt-markup/block/)  
+  Organize other elements in container columns.
+- [container](/omr/net/txt-markup/container/)  
+  Break content into columns and to add a footer to the form.
+- [content](/omr/net/txt-markup/content/)  
+  Add a line of text to the parent element.
+- [paragraph](/omr/net/txt-markup/paragraph/)  
+  Combine texts with different formatting.
+- [vertical_choicebox](/omr/net/txt-markup/vertical_choicebox/)  
+  Generate a vertical question block with multiple answers.
+- [write_in](/omr/net/txt-markup/write_in/)  
+  Provide a blank field in which the respondent can hand write some text or draw a picture.
 
-{{% /alert %}} 
+## Source code
 
-### **Example for creating multi-column questionnaire**
-
-<details>
-  <summary>Click to expand template</summary>
-
-````text
-?container=1-st
+```
+?container=Multi-column questionnaire
 	columns_count=3
-?block=Process
+?block=
 	column=1
-	border=Square
+	border=square
 	border_size=5
 	border_color=Black
-?paragraph=Process
-?content=Aspose Pty Ltd
-	font_style=Bold
-	font_size=8
-?content=Can Aspose.OMR process not only scans, but also photos?
+?content=Who did you purchase the product for?
 	font_style=Bold
 	font_size=12
-?content=Choose 1
-	font_style=Regular
-	font_size=9	
-&paragraph
-?vertical_choicebox=Can Aspose.OMR process not only scans, but also photos?
+?vertical_choicebox=Who did you purchase the product for?
+?answer=Self
+?content=Self
+	font_size=12
+&answer
+?answer=Family member
+?content=Family member
+	font_size=12
+&answer
+?answer=Friend
+?content=Friend
+	font_size=12
+&answer
+?answer=Colleague
+?content=Colleague
+	font_size=12
+&answer
+?answer=On behalf of a business
+?content=On behalf of a business
+	font_size=12
+&answer
+?answer=Own answer
+?content=Own answer
+	font_size=12
+?write_in=Own answer
+	required=true
+&answer
+&vertical_choicebox
+&block
+?block=
+	column=2
+	border=square
+	border_size=5
+	border_color=Black
+?content=Do you use our product currently?
+	font_style=Bold
+	font_size=12
+?vertical_choicebox=Do you use our product currently?
 ?answer=Yes
 ?content=Yes
-	font_style=Bold
-	font_size=10
+	font_size=12
 &answer
 ?answer=No
 ?content=No
-	font_style=Bold
-	font_size=10
+	font_size=12
 &answer
-&vertical_choicebox 	
+&vertical_choicebox
 &block
-?block=Rate
+?block=
 	column=2
-	border=Square
+	border=square
 	border_size=5
 	border_color=Black
-?paragraph=Rate
-?content=Aspose Pty Ltd
-	font_style=Bold
-	font_size=8
-?content=How would you rate the quality of the product?
+?content=How often do you use the product?
 	font_style=Bold
 	font_size=12
-?content=Choose 1
-	font_style=Regular
-	font_size=9	
-&paragraph
-?vertical_choicebox=How would you rate the quality of the product:
-?answer=5
-?content=Very high quality
-	font_style=Bold
-	font_size=10
-?content=of the product
-	font_size=10
-&answer
-?answer=4
-?content=High quality
-	font_style=Bold
-	font_size=10
-?content=of the product
-	font_size=10
-&answer
-?answer=3
-?content=Average quality
-	font_style=Bold
-	font_size=10
-?content=of the product
-	font_size=10
-&answer
-&vertical_choicebox 	
-&block
-?block=Forms
-	column=1
-	border=Square
-	border_size=5
-	border_color=Black
-?paragraph=Forms
-?content=Aspose Pty Ltd
-	font_style=Bold
-	font_size=8
-?content=Aspose.OMR works with any kind of OMR forms: tests, exams, questionnaires, surveys, etc.?
-	font_style=Bold
+?vertical_choicebox=How often do you use the product?
+?answer=Daily
+?content=Daily
 	font_size=12
-?content=Choose 1
-	font_style=Regular
-	font_size=9	
-&paragraph
-?vertical_choicebox=Aspose.OMR works with any kind of OMR forms: tests, exams, questionnaires, surveys, etc.?
-?answer=Yes
-?content=Yes, indeed!
-	font_style=Bold
-	font_size=10
 &answer
-?answer=No
-?content=No
-	font_style=Bold
-	font_size=10
+?answer=Once a week
+?content=Once a week
+	font_size=12
 &answer
-&vertical_choicebox 	
+?answer=Once a month
+?content=Once a month
+	font_size=12
+&answer
+?answer=Once a year
+?content=Once a year
+	font_size=12
+&answer
+&vertical_choicebox
 &block
-?block=Recommend
+?block=
 	column=3
-	border=Square
+	border=square
 	border_size=5
 	border_color=Black
-?paragraph=Recommend
-?content=Aspose Pty Ltd
-	font_style=Bold
-	font_size=8
-?content=How likely is it that you would recommend our company to a friend or colleague?
+?paragraph=
+?content=How satisfied were you with your experience?
 	font_style=Bold
 	font_size=12
-?content=Choose 1
-	font_style=Regular
-	font_size=9	
+?content=(on a scale of 10 to 1)
+	font_style=Italic
+	font_size=10
 &paragraph
-?vertical_choicebox=How likely is it that you would recommend our company to a friend or colleague?
-?answer=1
-?content=1
-	font_style=Bold
-	font_size=10
-&answer
-?answer=2
-?content=2
-	font_style=Bold
-	font_size=10
-&answer
-?answer=3
-?content=3
-	font_style=Bold
-	font_size=10
-&answer
-?answer=4
-?content=4
-	font_style=Bold
-	font_size=10
-&answer
-?answer=5
-?content=5
-	font_style=Bold
-	font_size=10
-&answer
-?answer=6
-?content=6
-	font_style=Bold
-	font_size=10
-&answer
-?answer=7
-?content=7
-	font_style=Bold
-	font_size=10
-&answer
-?answer=8
-?content=8
-	font_style=Bold
-	font_size=10
+?vertical_choicebox=How satisfied were you with your experience?
+?answer=10
+?content=10
+	font_size=12
 &answer
 ?answer=9
 ?content=9
-	font_style=Bold
-	font_size=10
+	font_size=12
 &answer
-&vertical_choicebox 	
+?answer=8
+?content=8
+	font_size=12
+&answer
+?answer=7
+?content=7
+	font_size=12
+&answer
+?answer=6
+?content=6
+	font_size=12
+&answer
+?answer=5
+?content=5
+	font_size=12
+&answer
+?answer=4
+?content=4
+	font_size=12
+&answer
+?answer=3
+?content=3
+	font_size=12
+&answer
+?answer=2
+?content=2
+	font_size=12
+&answer
+?answer=1
+?content=1
+	font_size=12
+&answer
+&vertical_choicebox
 &block
 &container
-
-?barcode=Test4
-	value=Aspose Pty Ltd
-	height=250
-	codetext=true
-	align = right
-	Y=3030
-	x=2100
 ?container=Footer
-	columns_count=3
 	type=footer
-?block=1
-	column=1
-?paragraph=1
-?content=Precinct Aspose Style 1
+?block=Copyright
+?paragraph=
+?content=Aspose.OMR Examples
+	align=right
 	font_style=Bold
 	font_size=14
-?content=© Aspose Pty Ltd 2001-2021
-	font_style=Regular
-	font_size=10
-&paragraph
-&block
-?block=2
-	column=2
-?paragraph=2
-?content=All Rights Reserved
-	font_style=Regular
-	font_size=10
-&paragraph
-&block
-?block=3
-	column=3
-?paragraph=3
-?content=Page 1
-	font_style=Bold
-	font_size=14
-?content=June 26, 2021
-	font_style=Regular
+?content=© Aspose Pty Ltd 2022
+	align=right
 	font_size=10
 &paragraph
 &block
 &container
-````
-</details>
+```
 
+## Printable form
 
-**Result**
+![Printable form](multi-column-template.png)
 
-**![todo:image_alt_text](multi-column-template-template.png)**
+## Filled form
 
+![Filled form](multi-column-fill.png)
 
+## Recognition results
 
+```
+Element Name,Value,
+Do you use our product currently?,"Yes"
+How often do you use the product?,"Once a week"
+How satisfied were you with your experience?,"8"
+Who did you purchase the product for?,"Own answer"
+```
+
+### Write-in field image
+
+![Write-in field](multi-column-write-in.png)

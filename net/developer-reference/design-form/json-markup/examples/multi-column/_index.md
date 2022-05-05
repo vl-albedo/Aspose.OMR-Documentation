@@ -1,481 +1,455 @@
 ---
-title: Multi-Column OMR Template example
-type: docs
 weight: 10
-url: /net/template-generation/json/examples/multi-column
+date: "2022-05-04"
+author: "Vladimir Lapin"
+type: docs
+url: /net/json-markup/examples/multi-column/
+aliases:
+- /net/template-generation/json/examples/multi-column
+title: Multi-column questionnaire
+description: A compact questionnaire with multi-column layout and open-ended questions.
+keywords:
+- layout
+- markup
+- template
+- design
+- form
+- JSON
+- column
+- questionnaire
+- compact
+- write-in
 ---
 
-## **Introduction**
-In this article, we provide example of creating a multi-column questionnaire.
+In this example, we will show the source code for a compact questionnaire with a multi-column layout, open-ended questions and a footer.
 
-### **Example for creating multi-column questionnaire**
-<details>
-<summary>Click to expand json markup</summary>
+## Used elements
 
-````json
+- [Block](/omr/net/json-markup/block/)  
+  Organize other elements in container columns.
+- [Container](/omr/net/json-markup/container/)  
+  Break content into columns and to add a footer to the form.
+- [Content](/omr/net/json-markup/content/)  
+  Add a line of text to the parent element.
+- [Paragraph](/omr/net/json-markup/paragraph/)  
+  Combine texts with different formatting.
+- [VerticalChoiceBox](/omr/net/json-markup/verticalchoicebox/)  
+  Generate a vertical question block with multiple answers.
+- [WriteIn](/omr/net/json-markup/writein/)  
+  Provide a blank field in which the respondent can hand write some text or draw a picture.
+
+## Source code
+
+```json
 {
-    "children": [{
-            "children": [{
-                    "name": "1-st",
-                    "children": [{
-                            "name": "Process",
-                            "children": [{
-                                    "name": "Process",
-                                    "children": [{
-                                            "name": "Aspose Pty Ltd",
-                                            "font_style": "Bold",
-                                            "font_size": 8,
-                                            "element_type": "Content"
-                                        }, {
-                                            "name": "Can Aspose.OMR process not only scans, but also photos?",
-                                            "font_style": "Bold",
-                                            "font_size": 12,
-                                            "element_type": "Content"
-                                        }, {
-                                            "name": "?hoose 1",
-                                            "font_style": "Regular",
-                                            "font_size": 9,
-                                            "element_type": "Content"
-                                        }
-                                    ],
-                                    "paragraph_type": "Normal",
-                                    "element_type": "Paragraph"
-                                }, {
-                                    "name": "Can Aspose.OMR process not only scans, but also photos?",
-                                    "children": [{
-                                            "name": "Yes",
-                                            "children": [{
-                                                    "name": "Yes",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }, {
-                                            "name": "No",
-                                            "children": [{
-                                                    "name": "No",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }
-                                    ],
-                                    "element_type": "VerticalChoiceBox"
-                                }
-                            ],
-                            "column": 1,
-                            "border": "Square",
-                            "border_size": 5,
-                            "border_color": "Black",
-                            "element_type": "Block"
-                        }, {
-                            "name": "Rate",
-                            "children": [{
-                                    "name": "Rate",
-                                    "children": [{
-                                            "name": "Aspose Pty Ltd",
-
-                                            "font_style": "Bold",
-                                            "font_size": 8,
-                                            "element_type": "Content"
-                                        }, {
-                                            "name": "How would you rate the quiality of the product?",
-
-                                            "font_style": "Bold",
-                                            "font_size": 12,
-                                            "element_type": "Content"
-                                        }, {
-                                            "name": "?hoose 1",
-
-                                            "font_style": "Regular",
-                                            "font_size": 9,
-                                            "element_type": "Content"
-                                        }
-                                    ],
-                                    "paragraph_type": "Normal",
-                                    "element_type": "Paragraph"
-                                }, {
-                                    "name": "How would you rate the quiality of the product:",
-                                    "children": [{
-                                            "name": "5",
-                                            "children": [{
-                                                    "name": "Very high quality",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }, {
-                                                    "name": "of the product",
-
-                                                    "font_style": "Regular",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }, {
-                                            "name": "4",
-                                            "children": [{
-                                                    "name": "High quality",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }, {
-                                                    "name": "of the product",
-
-                                                    "font_style": "Regular",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }, {
-                                            "name": "3",
-                                            "children": [{
-                                                    "name": "Average quality",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }, {
-                                                    "name": "of the product",
-
-                                                    "font_style": "Regular",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }
-                                    ],
-                                    "element_type": "VerticalChoiceBox"
-                                }
-                            ],
-                            "column": 2,
-                            "border": "Square",
-                            "border_size": 5,
-                            "border_color": "Black",
-                            "element_type": "Block"
-                        }, {
-                            "name": "Forms",
-                            "children": [{
-                                    "name": "Forms",
-                                    "children": [{
-                                            "name": "Aspose Pty Ltd",
-
-                                            "font_style": "Bold",
-                                            "font_size": 8,
-                                            "element_type": "Content"
-                                        }, {
-                                            "name": "Aspose.OMR works with any kind of OMR forms: tests, exams, questionnaires, surveys, etc.?",
-
-                                            "font_style": "Bold",
-                                            "font_size": 12,
-                                            "element_type": "Content"
-                                        }, {
-                                            "name": "?hoose 1",
-
-                                            "font_style": "Regular",
-                                            "font_size": 9,
-                                            "element_type": "Content"
-                                        }
-                                    ],
-                                    "paragraph_type": "Normal",
-                                    "element_type": "Paragraph"
-                                }, {
-                                    "name": "Aspose.OMR works with any kind of OMR forms: tests, exams, questionnaires, surveys, etc.?",
-                                    "children": [{
-                                            "name": "Yes",
-                                            "children": [{
-                                                    "name": "Yes, indeed!",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }, {
-                                            "name": "No",
-                                            "children": [{
-                                                    "name": "No",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }
-                                    ],
-                                    "element_type": "VerticalChoiceBox"
-                                }
-                            ],
-                            "column": 1,
-                            "border": "Square",
-                            "border_size": 5,
-                            "border_color": "Black",
-                            "element_type": "Block"
-                        }, {
-                            "name": "Reccomend",
-                            "children": [{
-                                    "name": "Reccomend",
-                                    "children": [{
-                                            "name": "Aspose Pty Ltd",
-
-                                            "font_style": "Bold",
-                                            "font_size": 8,
-                                            "element_type": "Content"
-                                        }, {
-                                            "name": "How likely is it that you would reccomend our company to a friend or colleague?",
-
-                                            "font_style": "Bold",
-                                            "font_size": 12,
-                                            "element_type": "Content"
-                                        }, {
-                                            "name": "?hoose 1",
-
-                                            "font_style": "Regular",
-                                            "font_size": 9,
-                                            "element_type": "Content"
-                                        }
-                                    ],
-                                    "paragraph_type": "Normal",
-                                    "element_type": "Paragraph"
-                                }, {
-                                    "name": "How likely is it that you would reccomend our company to a friend or colleague?",
-                                    "children": [{
-                                            "name": "1",
-                                            "children": [{
-                                                    "name": "1",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }, {
-                                            "name": "2",
-                                            "children": [{
-                                                    "name": "2",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }, {
-                                            "name": "3",
-                                            "children": [{
-                                                    "name": "3",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }, {
-                                            "name": "4",
-                                            "children": [{
-                                                    "name": "4",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }, {
-                                            "name": "5",
-                                            "children": [{
-                                                    "name": "5",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }, {
-                                            "name": "6",
-                                            "children": [{
-                                                    "name": "6",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }, {
-                                            "name": "7",
-                                            "children": [{
-                                                    "name": "7",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }, {
-                                            "name": "8",
-                                            "children": [{
-                                                    "name": "8",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }, {
-                                            "name": "9",
-                                            "children": [{
-                                                    "name": "9",
-
-                                                    "font_style": "Bold",
-                                                    "font_size": 10,
-                                                    "element_type": "Content"
-                                                }
-                                            ],
-                                            "element_type": "Answer"
-                                        }
-                                    ],
-                                    "element_type": "VerticalChoiceBox"
-                                }
-                            ],
-                            "column": 3,
-                            "border": "Square",
-                            "border_size": 5,
-                            "border_color": "Black",
-                            "element_type": "Block"
-                        }
-                    ],
-                    "columns_count": 3,
-                    "container_type": "Normal",
-                    "element_type": "Container"
-                }, {
-
-                    "element_type": "EmptyLine"
-                }, {
-                    "name": "Test4",
-                    "value": "Aspose Pty Ltd",
-                    "barcode_type": "qr",
-                    "qr_version": "Auto",
-                    "align": "Center",
-                    "height": 250,
-                    "codetext": true,
-                    "X": 2100,
-                    "Y": 3030,
-                    "element_type": "Barcode"
-                }, {
-                    "name": "Footer",
-                    "children": [{
-                            "name": "1",
-                            "children": [{
-                                    "name": "1",
-                                    "children": [{
-                                            "name": "Precinct Aspose Style 1",
-
-                                            "font_style": "Bold",
-                                            "font_size": 14,
-                                            "element_type": "Content"
-                                        }, {
-                                            "name": "� Aspose Pty Ltd 2001-2021",
-
-                                            "font_style": "Regular",
-                                            "font_size": 10,
-                                            "element_type": "Content"
-                                        }
-                                    ],
-                                    "paragraph_type": "Normal",
-                                    "element_type": "Paragraph"
-                                }
-                            ],
-                            "column": 1,
-                            "border": "None",
-                            "border_size": 3,
-                            "border_color": "Black",
-                            "element_type": "Block"
-                        }, {
-                            "name": "2",
-                            "children": [{
-                                    "name": "2",
-                                    "children": [{
-                                            "name": "All Rights Reserved",
-
-                                            "font_style": "Regular",
-                                            "font_size": 10,
-                                            "element_type": "Content"
-                                        }
-                                    ],
-                                    "paragraph_type": "Normal",
-                                    "element_type": "Paragraph"
-                                }
-                            ],
-                            "column": 2,
-                            "border": "None",
-                            "border_size": 3,
-                            "border_color": "Black",
-                            "element_type": "Block"
-                        }, {
-                            "name": "3",
-                            "children": [{
-                                    "name": "3",
-                                    "children": [{
-                                            "name": "Page 1",
-
-                                            "font_style": "Bold",
-                                            "font_size": 14,
-                                            "element_type": "Content"
-                                        }, {
-                                            "name": "June 26, 2021",
-
-                                            "font_style": "Regular",
-                                            "font_size": 10,
-                                            "element_type": "Content"
-                                        }
-                                    ],
-                                    "paragraph_type": "Normal",
-                                    "element_type": "Paragraph"
-                                }
-                            ],
-                            "column": 3,
-                            "border": "None",
-                            "border_size": 3,
-                            "border_color": "Black",
-                            "element_type": "Block"
-                        }
-                    ],
-                    "columns_count": 3,
-                    "container_type": "Footer",
-                    "element_type": "Container"
-                }
-            ],
-            "element_type": "Page"
-        }
-    ],
-    "element_type": "Template"
+	"element_type": "Template",
+	"children": [
+		{
+			"element_type": "Page",
+			"children": [
+				{
+					"element_type": "Container",
+					"name": "Multi-column questionnaire",
+					"columns_count": 3,
+					"children": [
+						{
+							"element_type": "Block",
+							"column": 1,
+							"border": "square",
+							"border_size": 5,
+							"border_color": "black",
+							"children": [
+								{
+									"element_type": "Content",
+									"name": "Who did you purchase the product for?",
+									"font_style": "bold",
+									"font_size": 12
+								},
+								{
+									"element_type": "VerticalChoiceBox",
+									"name": "Who did you purchase the product for?",
+									"children": [
+										{
+											"element_type": "Answer",
+											"name": "Self",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "Self",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "Family member",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "Family member",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "Friend",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "Friend",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "Colleague",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "Colleague",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "On behalf of a business",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "On behalf of a business",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "Own answer",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "Own answer",
+													"font_size": 12
+												},
+												{
+													"element_type": "WriteIn",
+													"required": true
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"element_type": "Block",
+							"column": 2,
+							"border": "square",
+							"border_size": 5,
+							"border_color": "black",
+							"children": [
+								{
+									"element_type": "Content",
+									"name": "Do you use our product currently?",
+									"font_style": "bold",
+									"font_size": 12
+								},
+								{
+									"element_type": "VerticalChoiceBox",
+									"name": "Do you use our product currently?",
+									"children": [
+										{
+											"element_type": "Answer",
+											"name": "Yes",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "Yes",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "No",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "No",
+													"font_size": 12
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"element_type": "Block",
+							"column": 2,
+							"border": "square",
+							"border_size": 5,
+							"border_color": "black",
+							"children": [
+								{
+									"element_type": "Content",
+									"name": "How often do you use the product?",
+									"font_style": "bold",
+									"font_size": 12
+								},
+								{
+									"element_type": "VerticalChoiceBox",
+									"name": "How often do you use the product?",
+									"children": [
+										{
+											"element_type": "Answer",
+											"name": "Daily",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "Daily",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "Once a week",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "Once a week",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "Once a month",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "Once a month",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "Once a year",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "Once a year",
+													"font_size": 12
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"element_type": "Block",
+							"column": 3,
+							"border": "square",
+							"border_size": 5,
+							"border_color": "black",
+							"children": [
+								{
+									"element_type": "Paragraph",
+									"children": [
+										{
+										"element_type": "Content",
+										"name": "How satisfied were you with your experience?",
+										"font_style": "bold",
+										"font_size": 12
+										},
+										{
+										"element_type": "Content",
+										"name": "(on a scale of 10 to 1)",
+										"font_style": "italic",
+										"font_size": 10
+										},
+									]
+								},
+								{
+									"element_type": "VerticalChoiceBox",
+									"name": "How satisfied were you with your experience?",
+									"children": [
+										{
+											"element_type": "Answer",
+											"name": "10",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "10",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "9",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "9",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "8",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "8",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "7",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "7",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "6",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "6",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "5",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "5",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "4",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "4",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "3",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "3",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "2",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "2",
+													"font_size": 12
+												}
+											]
+										},
+										{
+											"element_type": "Answer",
+											"name": "1",
+											"children": [
+												{
+													"element_type": "Content",
+													"name": "1",
+													"font_size": 12
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"element_type": "Container",
+					"name": "Footer",
+					"container_type": "footer",
+					"children": [
+						{
+							"element_type": "block",
+							"name": "Copyright",
+							"children": [
+								{
+									"element_type": "Paragraph",
+									"children": [
+										{
+											"element_type": "Content",
+											"name": "Aspose.OMR Examples",
+											"align": "right",
+											"font_style": "bold",
+											"font_size": 14
+										},
+										{
+											"element_type": "Content",
+											"name": "© Aspose Pty Ltd 2022",
+											"align": "right",
+											"font_size": 10
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
 }
+```
 
-````
-</details>
+## Printable form
 
+![Printable form](multi-column-template.png)
 
-**Result**
+## Filled form
 
-**![todo:image_alt_text](multi-column-template-template.png)**
+![Filled form](multi-column-fill.png)
 
+## Recognition results
 
+```
+Element Name,Value,
+Do you use our product currently?,"Yes"
+How often do you use the product?,"Once a week"
+How satisfied were you with your experience?,"8"
+Who did you purchase the product for?,"Own answer"
+```
 
+### Write-in field image
+
+![Write-in field](multi-column-write-in.png)
